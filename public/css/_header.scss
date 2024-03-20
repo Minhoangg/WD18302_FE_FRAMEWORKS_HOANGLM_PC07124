@@ -1,0 +1,98 @@
+@import "_mixins.scss";
+
+
+#wrapper {
+    width: 100%;
+
+    #header {
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, .15);
+
+        #header-wrapper {
+
+            .logo {
+
+                a {
+                    img {
+                        padding: 10px 0px;
+                    }
+                }
+            }
+
+            .form-search {
+
+                .menu-dropdown {
+
+                    margin-right: 130px;
+                    margin-left: 0px;
+
+                    .button {
+                        @include button_page(#1d71ab, #f1f1f1, 12px 15px, 5px)
+                    }
+
+                    .dropdown-menu {
+
+                        .list-group {
+
+                            .list-group-item {
+                                a {
+                                    text-decoration: none;
+                                    color: #777;
+
+                                    span {
+                                        margin-right: 7px;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .search {
+                    border-radius: 5px;
+                    padding: 0px 5px;
+                    background-color: #e4e4e4;
+                    width: 480px;
+                    margin-right: 130px;
+
+                    form {
+                        div {
+                            input {
+                                border: none;
+                                width: 500px;
+                                border-radius: 5px;
+                                outline: none;
+                                background: none;
+                            }
+
+                            button {
+                                outline: none;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            .card-auth {
+                button {
+
+                    @include button_page(#1d71ab, #f1f1f1, 5px 10px, 5px);
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+
+
+
+        }
+
+    }
+
+
+}

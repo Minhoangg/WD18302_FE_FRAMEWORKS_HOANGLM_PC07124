@@ -1,0 +1,173 @@
+#wrapper {
+  width: 100%;
+}
+#wrapper #header {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+}
+#wrapper #header #header-wrapper .logo a img {
+  padding: 10px 0px;
+}
+#wrapper #header #header-wrapper .form-search .menu-dropdown {
+  margin-right: 130px;
+  margin-left: 0px;
+}
+#wrapper #header #header-wrapper .form-search .menu-dropdown .button {
+  background-color: #1d71ab;
+  color: #f1f1f1;
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+#wrapper #header #header-wrapper .form-search .menu-dropdown .dropdown-menu .list-group .list-group-item a {
+  text-decoration: none;
+  color: #777;
+}
+#wrapper #header #header-wrapper .form-search .menu-dropdown .dropdown-menu .list-group .list-group-item a span {
+  margin-right: 7px;
+}
+#wrapper #header #header-wrapper .form-search .search {
+  border-radius: 5px;
+  padding: 0px 5px;
+  background-color: #e4e4e4;
+  width: 480px;
+  margin-right: 130px;
+}
+#wrapper #header #header-wrapper .form-search .search form div input {
+  border: none;
+  width: 500px;
+  border-radius: 5px;
+  outline: none;
+  background: none;
+}
+#wrapper #header #header-wrapper .form-search .search form div button {
+  outline: none;
+}
+#wrapper #header #header-wrapper .card-auth button {
+  background-color: #1d71ab;
+  color: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+#wrapper #header #header-wrapper .card-auth button a {
+  text-decoration: none;
+  color: white;
+}
+
+#wrapper #footer {
+  background-image: url(../../images/bg-footer.webp);
+  background-color: #263238;
+}
+#wrapper #footer .footer-main {
+  color: white;
+}
+#wrapper #footer .footer-main div div div ul {
+  list-style: none;
+}
+#wrapper #footer .footer-main div div div ul li {
+  margin: 5px 0px;
+}
+
+#wrapper .list-course {
+  background-color: #f0f0f0;
+}
+#wrapper .list-course .name-course h2 {
+  color: #0067a7;
+}
+#wrapper .list-course #icon_course .row .col-2 .bg-white {
+  border-radius: 20px;
+}
+#wrapper .list-course #icon_course .row .col-2 .bg-white a {
+  text-decoration: none;
+  color: black;
+}
+#wrapper .outstanding-course {
+  background-color: rgb(255, 247, 245);
+}
+#wrapper .outstanding-course .container .name-course h2 {
+  color: #0067a7;
+}
+#wrapper .outstanding-course .container .row .col-4 a {
+  text-decoration: none;
+}
+#wrapper .outstanding-course .container .row .col-4 a .card .card-bootom img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#wrapper .outstanding-course .container .row .col-4 a .card .card-bootom div span {
+  color: #FF7816;
+}
+#wrapper .content-new-box .content-new .name-content h2 {
+  color: #0067a7;
+}
+#wrapper .content-new-box .content-new .row-content a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+#wrapper .content-new-box .content-new .row-content a .card .content-bottom p {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #5E5E5E;
+}
+#wrapper .education-box {
+  background-color: #f0f0f0;
+}
+#wrapper .education-box .education .name-education h2 {
+  color: #0067a7;
+}
+#wrapper .education-box .education .row div a {
+  color: black;
+  text-decoration: none;
+}
+#wrapper .education-box .education .row div a div {
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+#wrapper .contact-box .contact .row {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+}
+#wrapper .contact-box .contact .row .form-contact form button {
+  width: 80px;
+  background-color: #1d71ab;
+  color: #f1f1f1;
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+#wrapper .contact-box .contact .row .contact-address div ul li {
+  list-style: none;
+  margin: 10px 0 40px 0;
+}
+#wrapper .contact-box .contact .row .contact-address div ul li span i {
+  font-size: 35px;
+}
+
+#wrapper {
+  width: 100%;
+}
+#wrapper #login-main {
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 450px;
+  background-color: white;
+  border-radius: 15px;
+}
+#wrapper #login-main .login-top {
+  border-radius: 15px 15px 0px 0px;
+  background-color: #57b846;
+}
+#wrapper #login-main .login-form {
+  background-color: white;
+}
+#wrapper #login-main .login-form form button {
+  background-color: #57b846;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}/*# sourceMappingURL=style.css.map */

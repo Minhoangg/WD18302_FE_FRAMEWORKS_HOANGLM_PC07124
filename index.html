@@ -1,188 +1,673 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <title>AngularJS Component</title>
+    <!-- bootstrap link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- font awesome link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- css link  -->
+    <link rel="stylesheet" href="./public/css/style.css">
+    <!-- angular link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- js link  -->
+    <script src="./public/js/component.js"></script>
 </head>
 
 <body>
-    <header class="container-fluid mb-3 border-bottom fixed-top bg-white">
-        <nav class="container navbar navbar-expand-lg navbar-light  ">
-            <div class="container-fluid d-flex justify-content-around px-0">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse px-0" id="navbarNavDropdown">
-                    <ul class="navbar-nav py-2">
-                        <li class="nav-item  ">
-                            <a class="nav-link active" aria-current="page" href="#"><span><i
-                                        class="fa-solid fa-house"></i></span>Trang chủ</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link" href="#"><span><i class="fa-solid fa-list-ul"></i></span>Giới thiệu</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link" href="#"><span><i class="fa-solid fa-phone"></i></span>Liên hệ</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link" href="#"><span><i class="fa-solid fa-envelope"></i></span>Gợi ý</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link" href="#"><span><i class="fa-solid fa-circle-question"></i></span>Hỏi
-                                đáp</a>
-                        </li>
-                        <li class="nav-item mx-3 dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+    <div id="wrapper">
+        <header id="header" class="header container-fluid  border-bottom fixed-top bg-white">
+            <div class="container p-0  " id="header-wrapper">
+                <div class="row w-100 d-flex align-items-center justify-content-between">
+                    <!-- logo  -->
+                    <div class="logo col-2">
+                        <a href=""><img src="./images/happy-academy-logo.png" alt="" width="125" height="84"></a>
+                    </div>
+                    <!-- form search  -->
+                    <div class="d-flex form-search align-items-center justify-content-around col-9 px-4">
+                        <div class="menu-dropdown ">
+                            <button type="button" class=" button btn shadow-none dropdown-toggle "
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <span><i class="fa-solid fa-user"></i></span>
-                                Tài khoản
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
-                                <li><a class="dropdown-item" href="#">Đăng kí</a></li>
-                                <li><a class="dropdown-item" href="#">Quên mật khẩu</a></li>
-                            </ul>
+                                <span><i class="fa-solid fa-list-ul me-3"></i></span> Danh mục khóa học
+                            </button>
+                            <div class="dropdown-menu p-0 border-0">
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-laptop-code"></i></span>
+                                            Công nghệ thông tin</a></li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-users"></i></span>Hôn
+                                            nhân
+                                            - Gia đình</a></li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-rocket"></i></span>Kinh
+                                            doanh - Khởi nghiệp</a></li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-person-rays"></i></span>Marketing</a></li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-language"></i></span>Ngoại
+                                            ngữ</a></li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-child"></i></span>Nuôi
+                                            dạy
+                                            con</a></li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-regular fa-lightbulb"></i></span>Phát triển cá nhân</a>
+                                    </li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-utensils"></i></span>Phong
+                                            cách sống</a></li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-scale-balanced"></i></span>Sale - Bán hàng</a>
+                                    </li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-user-nurse"></i></span>Sức
+                                            khỏe - Giới tính</a></li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-pen-ruler"></i></span>Thiết
+                                            kế</a></li>
+                                    <li class="list-group-item"><a href="#"> <span><i
+                                                    class="fa-solid fa-file-word"></i></span>Tin
+                                            học văn phòng</a></li>
+                                </ul>
+                            </div>
 
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="search">
+                            <form action="">
+                                <div class="d-flex">
+                                    <input type="text" placeholder="nhập từ khóa tìm kiếm ">
+                                    <button type="submit" class="btn"><i
+                                            class="fa-solid fa-magnifying-glass"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- card auth  -->
+                    <div class="card-auth col-1 d-flex justify-content-between p-0">
+                        <button type="button" class="btn"><a href="./login.html"><i
+                                    class="fa-solid fa-user"></i></a></button>
+                        <button type="button" class="btn"><a href=""><i class="fa-solid fa-cart-plus"></i></a></button>
+                    </div>
                 </div>
-                <div>
-                    <ul class="navbar-nav">
-                        <li class="nav-item mx-3">
-                            <a class="nav-link" href="#">Tiếng việt</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link" href="#">Tiếng anh</a>
-                        </li>
-                    </ul>
+
+            </div>
+        </header>
+
+
+        <!-- banner  -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="margin-top: 85px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/banner-web.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/banner-web1.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
-        </nav>
-    </header>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
-    <div class="container-fluid mb-3 mt-5 pt-4">
-        <div class="container ">
-            <div class="row">
-                <div class="col-9">
-                    <div class="row ">
-                        <div class="col-4 p-3">
-                            <div class="card p-2" style="width: 18rem;">
-                                <img src="./images/jscoban.png" class="card-img-top img-fluid rounded-3" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"> javascrip cơ bản</h5>
-                                    <p class="card-text">Đến với khóa học này các bạn sẽ được học javascrip ở mức cơ bản
-                                    </p>
-                                    <a href="#" class="btn btn-primary">Xem thêm</a>
+
+        <!-- hoc gi hom nay  -->
+        <div class="list-course container-fluid">
+            <div class=" name-course container d-flex justify-content-center align-items-center py-4">
+                <h2>HÔM NAY BẠN MUỐN HỌC GÌ?</h2>
+            </div>
+            <div class="container " id="icon_course">
+
+                <div class="row">
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-eng.svg" alt="" width="100%" height="50px">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-4 p-3">
-                            <div class="card p-2" style="width: 18rem;">
-                                <img src="./images/jsnangcao.png" class="card-img-top img-fluid rounded-3 " alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"> javascrip nâng cao</h5>
-                                    <p class="card-text">Đến với khóa học này các bạn sẽ được học javascrip ở mức nâng
-                                        cao</p>
-                                    <a href="#" class="btn btn-primary">Xem thêm</a>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Ngoại ngữ
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-4 p-3">
-                            <div class="card p-2" style="width: 18rem;">
-                                <img src="./images/nodejs.png" class="card-img-top img-fluid rounded-3" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nodejs Expressjs</h5>
-                                    <p class="card-text">Đến với khóa học này các bạn sẽ được học kiến thức về nodejs và
-                                        farmeworks express</p>
-                                    <a href="#" class="btn btn-primary">Xem thêm</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 p-3">
-                            <div class="card p-2" style="width: 18rem;">
-                                <img src="./images/jscoban.png" class="card-img-top img-fluid rounded-3" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"> javascrip cơ bản</h5>
-                                    <p class="card-text">Đến với khóa học này các bạn sẽ được học javascrip ở mức cơ bản
-                                    </p>
-                                    <a href="#" class="btn btn-primary">Xem thêm</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 p-3">
-                            <div class="card p-2" style="width: 18rem;">
-                                <img src="./images/jsnangcao.png" class="card-img-top img-fluid rounded-3 " alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"> javascrip nâng cao</h5>
-                                    <p class="card-text">Đến với khóa học này các bạn sẽ được học javascrip ở mức nâng
-                                        cao</p>
-                                    <a href="#" class="btn btn-primary">Xem thêm</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 p-3">
-                            <div class="card p-2" style="width: 18rem;">
-                                <img src="./images/nodejs.png" class="card-img-top img-fluid rounded-3" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nodejs Expressjs</h5>
-                                    <p class="card-text">Đến với khóa học này các bạn sẽ được học kiến thức về nodejs và
-                                        farmeworks express</p>
-                                    <a href="#" class="btn btn-primary">Xem thêm</a>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-3  p-3 pe-0">
-                    <div class="card mb-3">
-                        <div class="row p-2 " style="width: 18rem;">
-                            <div class="col-4"> <img src="./images/card.jpg" class="card-img-top" alt="..."></div>
-                            <div class="col-8">
-                                <p class="m-0">111 itens</p>
-                                <p class="m-0">999.999.999 VNĐ</p>
-                                <a href="" class="text-decoration-none">
-                                    <p>View card</p>
-                                </a>
-                            </div>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-nuoidaycon.svg" alt="" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Nuôi dạy con
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="card p-3 mb-3">
-                        <form action="">
-                            <input type="text" class="form-control" placeholder="search">
-                        </form>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4 ">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-honnha.svg" alt="" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Hôn nhân - Gia đình
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="/images/icon-mar.svg" alt="" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Marketing
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-tinhoc.svg" alt="" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Tin học văn phòng
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-thietke.svg" alt="" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Thiết kế
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-kinhdoanh.svg" alt="" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Kinh doanh
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-phattiren.svg" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Phát triển cá nhân
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-save.svg" alt="" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Sale - Bán hàng
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-cntt.svg" alt="" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Công nghệ thông tin
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-suckhoe.svg" alt="" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Sức khỏe - Giới tính
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-2 p-3 ">
+                        <div class="bg-white py-4">
+                            <a href="">
+                                <div class="">
+                                    <img src="./images/icon-phongcach.svg" alt="" width="100%" height="50px">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    Phong cách sống
+                                </div>
+                            </a>
+                        </div>
                     </div>
 
-                    <ul class="list-group">
-                        <li class="list-group-item fw-bold"><span class="mx-2"><i
-                                    class="fa-solid fa-list-ul"></i></span>Chủng loại</li>
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-black">Khóa học
-                                nodejs</a></li>
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-black">Khóa học php
-                                laravel</a></li>
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-black">Khóa học scss</a>
-                        </li>
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-black">Khóa học java</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
+
+        <!-- khoa hoc noi bat  -->
+        <div class=" outstanding-course container-fluid">
+            <div class="container">
+                <div class=" name-course container d-flex justify-content-center align-items-center py-4">
+                    <h2>KHÓA HỌC NỔI BẬT</h2>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/20-chien-luoc-lam-giau.jpg" class="card-img-top" alt="...">
+                                <div class="card-body border-bottom p-3">
+                                    <h5 class="card-text">20 chiến lược làm giàu</h5>
+                                </div>
+                                <div class="card-bootom p-3 d-flex justify-content-between align-items-center">
+
+                                    <img src="./images/pham-thanh-long.jpg" alt="" class="">
+
+                                    <div class="">
+                                        <span>400.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/sat-thu-livestream-ban-hang.jpg" class="card-img-top" alt="...">
+                                <div class="card-body border-bottom p-3">
+                                    <h5 class="card-text">Sát thủ bán hàng livestream</h5>
+                                </div>
+                                <div class="card-bootom p-3 d-flex justify-content-between align-items-center">
+
+                                    <img src="./images/pham-thanh-long.jpg" alt="" class="">
+
+                                    <div class="">
+                                        <span>400.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/kinh-doanh-dot-pha.jpg" class="card-img-top" alt="...">
+                                <div class="card-body border-bottom p-3">
+                                    <h5 class="card-text">Kinh doanh đột phá</h5>
+                                </div>
+                                <div class="card-bootom p-3 d-flex justify-content-between align-items-center">
+
+                                    <img src="./images/pham-thanh-long.jpg" alt="" class="">
+
+                                    <div class="">
+                                        <span>400.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/hoc-tuyet-chieu-dam-phan.jpg" class="card-img-top" alt="...">
+                                <div class="card-body border-bottom p-3">
+                                    <h5 class="card-text">Tuyệt chiêu đàm phán</h5>
+                                </div>
+                                <div class="card-bootom p-3 d-flex justify-content-between align-items-center">
+
+                                    <img src="./images/pham-thanh-long.jpg" alt="" class="">
+
+                                    <div class="">
+                                        <span>400.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/hoc-quan-tri-cam-xuc.jpg" class="card-img-top" alt="...">
+                                <div class="card-body border-bottom p-3">
+                                    <h5 class="card-text">Quản trị cảm xúc</h5>
+                                </div>
+                                <div class="card-bootom p-3 d-flex justify-content-between align-items-center">
+
+                                    <img src="./images/pham-thanh-long.jpg" alt="" class="">
+
+                                    <div class="">
+                                        <span>400.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/ban-hang-gia-cao.jpg" class="card-img-top" alt="...">
+                                <div class="card-body border-bottom p-3">
+                                    <h5 class="card-text">Nghệ thuật bán hàng giá cao</h5>
+                                </div>
+                                <div class="card-bootom p-3 d-flex justify-content-between align-items-center">
+
+                                    <img src="./images/pham-thanh-long.jpg" alt="" class="">
+
+                                    <div class="">
+                                        <span>400.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- tin moi nhat  -->
+        <div class="content-new-box container-fluid">
+            <div class=" content-new container">
+                <div class=" name-content container d-flex justify-content-center align-items-center py-4">
+                    <h2>TIN MỚI NHẤT</h2>
+                </div>
+                <div class="row row-content">
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/hoc-quan-tri-cam-xuc.jpg" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                    <h5>Doanh nghiệp “nhẹ gánh” nguồn nhân lực nhờ 4 ứng dụng trong Auto Call</h5>
+                                </div>
+                                <div class="card-body content-bottom">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/hoc-quan-tri-cam-xuc.jpg" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                    <h5>Doanh nghiệp “nhẹ gánh” nguồn nhân lực nhờ 4 ứng dụng trong Auto Call</h5>
+                                </div>
+                                <div class="card-body content-bottom">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/hoc-quan-tri-cam-xuc.jpg" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                    <h5>Doanh nghiệp “nhẹ gánh” nguồn nhân lực nhờ 4 ứng dụng trong Auto Call</h5>
+                                </div>
+                                <div class="card-body content-bottom">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/hoc-quan-tri-cam-xuc.jpg" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                    <h5>Doanh nghiệp “nhẹ gánh” nguồn nhân lực nhờ 4 ứng dụng trong Auto Call</h5>
+                                </div>
+                                <div class="card-body content-bottom">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/hoc-quan-tri-cam-xuc.jpg" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                    <h5>Doanh nghiệp “nhẹ gánh” nguồn nhân lực nhờ 4 ứng dụng trong Auto Call</h5>
+                                </div>
+                                <div class="card-body content-bottom">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="card">
+                                <img src="./images/hoc-quan-tri-cam-xuc.jpg" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                    <h5>Doanh nghiệp “nhẹ gánh” nguồn nhân lực nhờ 4 ứng dụng trong Auto Call</h5>
+                                </div>
+                                <div class="card-body content-bottom">
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- education  -->
+        <div class=" education-box container-fluid py-3" >
+            <div class=" education container">
+                <div class=" name-education container d-flex justify-content-center align-items-center py-4">
+                    <h2>LÝ DO HỌC TẠI EDUCATION</h2>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="p-5 d-flex align-items-center justify-content-center">
+                                <div>
+                                    <img src="./images/giang-vien-uy-tin.png" alt="">
+
+                                    <div>
+                                        <h5>Giảng viên uy tín</h5>
+                                    </div>
+                                    <div>
+                                        <span>Bài giảng chất lượng</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="p-5 d-flex align-items-center justify-content-center">
+                                <div>
+                                    <img src="./images/giang-vien-uy-tin.png" alt="">
+
+                                    <div>
+                                        <h5>Giảng viên uy tín</h5>
+                                    </div>
+                                    <div>
+                                        <span>Bài giảng chất lượng</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 p-3">
+                        <a href="">
+                            <div class="p-5 d-flex align-items-center justify-content-center">
+                                <div>
+                                    <img src="./images/giang-vien-uy-tin.png" alt="">
+
+                                    <div>
+                                        <h5>Giảng viên uy tín</h5>
+                                    </div>
+                                    <div>
+                                        <span>Bài giảng chất lượng</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- contact  -->
+        <div class="contact-box container-fluid">
+            <div class="contact container py-4">
+                <div class="row">
+                    <div class="col-6 p-5 form-contact">
+                        <form>
+                            <div class=" mb-3 mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3 mb-4">
+                                <label for="exampleInputPassword1" class="form-label">Số điện thoại:</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <label for="exampleInputPassword1" class="form-label">Nội dung:</label>
+                            <textarea name="" id="" rows="5" class="form-control"></textarea>
+
+                            <button type="submit" class="btn btn-primary mt-4">Gửi</button>
+                        </form>
+                    </div>
+                    <div class="col-6 p-5 contact-address d-flex justify-content-center">
+                        <div>
+                            <ul>
+                                <li><span class="me-2"><i class="fa-solid fa-location-dot"></i></span><b>Địa
+                                        chỉ:</b>Ninh kiều, Cần Thơ</li>
+                                <li><span class="me-2"><i class="fa-solid fa-phone"></i></span><b>Số điện
+                                        thoại:</b>0947702541</li>
+                                <li><span class="me-2"><i class="fa-solid fa-paper-plane"></i></i></span><b>Email:</b>
+                                    hoanglmpc07124@fpt.edu.vn</li>
+                                <li><span class="me-2"><i
+                                            class="fa-solid fa-earth-americas"></i></span><b>Website:</b>luongminhhoang.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer id="footer" class="container-fluid p-0">
+            <div class="footer-main container py-4 px-0">
+                <div class="row d-flex">
+                    <div class="col-4">
+                        <div class=" border-bottom mb-5">
+                            <h5>THÔNG TIN LIÊN HỆ</h5>
+                        </div>
+                        <div class="">
+                            <ul class="p-0">
+                                <li><b>SĐT: </b> 0947702541</li>
+                                <li><b>Email: </b> hoanglmpc07124@fpt.edu.vn</li>
+                                <li><b>Địa chỉ: </b> ấp bình phú 1, phú bình, phú tân, an giang</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class=" border-bottom mb-5">
+                            <h5>DANH MỤC KHÓA HỌC</h5>
+                        </div>
+                        <div class="">
+                            <ul class="p-0">
+                                <li>Công nghệ thông tin</li>
+                                <li>Kinh doanh khởi nghiệp</li>
+                                <li>Phát triển cá nhân</li>
+                                <li>Giáo dục giới tính</li>
+                                <li>Hôn nhân gia đình</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class=" border-bottom mb-5">
+                            <h5>CHÍNH SÁCH VÀ QUY ĐỊNH CHUNG</h5>
+                        </div>
+                        <div class="">
+                            <ul class="p-0">
+                                <li>Chính sách và quy định</li>
+                                <li>Chính sách bảo mật</li>
+                                <li>Chính sách hoàn tiền</li>
+                                <li>Chính sách bán hàng</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="container-fluid border-top p-0 text-white d-flex justify-content-center align-items-center py-3">
+                Lương Minh Hoàng </div>
+        </footer>
     </div>
-
-    <footer class="container-fluid mb-3 border-top">
-        <div class="container text-center bg-white py-3">Lương Minh Hoàng - Pc07124</div>
-    </footer>
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
